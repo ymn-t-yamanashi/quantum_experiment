@@ -15,4 +15,9 @@ defmodule QuantumExperiment do
   def hello do
     :world
   end
+
+  def pirnt(message) do
+    "#{DateTime.utc_now()}:#{message}"
+    |> IO.puts()
+  end
 end

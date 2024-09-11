@@ -7,9 +7,11 @@ defmodule QuantumExperiment.Application do
 
   @impl true
   def start(_type, _args) do
+    QuantumExperiment.pirnt("開始")
     children = [
       # Starts a worker by calling: QuantumExperiment.Worker.start_link(arg)
       # {QuantumExperiment.Worker, arg}
+      QuantumExperiment.Scheduler
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
